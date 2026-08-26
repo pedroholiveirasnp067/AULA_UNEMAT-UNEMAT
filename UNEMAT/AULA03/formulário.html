@@ -3,11 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apendendo formulários</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Aprendendo formulários</title>
 </head>
 <body>
     <nav>
-        <a href=""></a>
+        <a href="index.html">Página inicial</a> |
+        <a href="formulário.html">Formulário</a>
     </nav>
+    <hr>
+    <main>
+        <h1>Formulário</h1>
+        <form action="" method="post"> <!-- HTTP methods-->
+            <fieldset>
+                <legend>
+                    Dados pessoais
+                </legend>
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" placeholder="Digite seu nome">
+                <br>
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="Digite seu email">
+                <br>
+                <label for="telefone">Telefone:</label>
+                <input id="telefone" type="tel" placeholder="Digite seu telefone">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Endereço
+                </legend>
+                <input type="submit" name="enviar">
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
