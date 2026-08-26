@@ -4,7 +4,6 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Exercício</title>
-    <link rel='stylesheet' href='main.css'>
     <style>
         fieldset{
             border-radius: 10px;
@@ -36,9 +35,11 @@
             align-items: flex-end;
             margin-left: 20px;
         }
+        .botao{
+            width: 100px;
+        }
     </style>
 </head>
-
 <body>
     <h1>Exercício de Formulário</h1>
     <p>Construa um formulário HTML para cadastro de clientes.</p>
@@ -46,7 +47,7 @@
          nome, email, whatsapp, número da rua, nome da rua, bairro, cep.</p>
     
     <h1>Formulário</h1>
-    <form>
+    <form action="https://ivanpires.dev/processa.php" method="post">
         <fieldset>
             <legend>Dados Pessoais</legend>
             <nav>
@@ -79,6 +80,8 @@
                     <input id="bairro" name="bairro" type="text" placeholder="Digite o bairro">
                     <br>
                     <input id="cep" name="cep" type="text" placeholder="Digite o CEP" maxlength="8">
+                    <br>
+                    <input class="botao" type="submit" name="enviar" value="Enviar">
                 </div>
             </nav>
         </fieldset>
