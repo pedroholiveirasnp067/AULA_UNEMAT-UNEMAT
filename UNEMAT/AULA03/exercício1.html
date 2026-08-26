@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Exercício</title>
+    <link rel='stylesheet' href='main.css'>
+    <style>
+        fieldset{
+            border-color: yellow;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 400px;
+        }
+        fieldset legend{
+            color: blue
+        }
+        body{
+            background-color: #333232;
+            color: white;
+        }
+        input{
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        label{
+            color: green;
+            display: block;
+            margin-bottom: 12px;
+        }
+        nav{
+            display: flex;
+            
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercício de Formulário</h1>
+    <p>Construa um formulário HTML para cadastro de clientes.</p>
+    <p>O formulário deve conter os seguintes campos:
+         nome, email, whatsapp, número da rua, nome da rua, bairro, cep.</p>
+    
+    <h1>Formulário</h1>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <nav>
+                <div>
+                    <label for="nome">Nome: </label>
+                    <br>
+                    <label for="email">Email: </label>
+                    <br>
+                    <label for="whatsapp">Whatsapp:</label>
+                    <br>
+                    <label for="numero-rua">Número da Rua:</label>
+                    <br>
+                    <label for="nome-rua">Nome da Rua:</label>
+                    <br>
+                    <label for="bairro">Bairro:</label>
+                    <br>
+                    <label for="cep">CEP:</label>
+                </div>
+                <div>
+                    <input id="nome" name="nome" type="text" placeholder="Digite seu nome">
+                    <br>
+                    <input id="email" name="email" type="email" placeholder="Digite seu email" required>
+                    <br>
+                    <input id="whatsapp" name="whatsapp" type="tel" placeholder="Digite seu whatsapp">
+                    <br>
+                    <input id="numero-rua" name="numero-rua" type="number" placeholder="Digite o número da rua">
+                    <br>
+                    <input id="nome-rua" name="nome-rua" type="text" placeholder="Digite o nome da rua">
+                    <br>
+                    <input id="bairro" name="bairro" type="text" placeholder="Digite o bairro">
+                    <br>
+                    <input id="cep" name="cep" type="text" placeholder="Digite o CEP" maxlength="8">
+                </div>
+            </nav>
+        </fieldset>
+    </form>
+</body>
+
+</html>
