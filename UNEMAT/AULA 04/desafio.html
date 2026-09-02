@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>DESAFIO</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <!-- DESAFIO: 
+        CRIE UMA PÁGINA (LANDPAGE) CONTENDO:
+        - NOME DO EVENTO
+        - TEXTO ALEATÓRIO SIMULANDO INFORMAÇÕES DO EVENTO
+        - INSCRIÇÃO
+
+        A INSCRIÇÃO DEVE CONTER:
+        - NOME, E-MAIL E TELEFONE, ENDEREÇO COM CEP.
+        - ESCOLHER UM MIICURSO (HTML, CSS OU JAVASCRIPT).
+        - ESCOLHER SUGESTÃO DE COFFE BREAK (CAFÉ, CHÁ, SUCO, ...)
+        
+        - FAÇA REGEX PARA O CEP E TELEFONE, PARA VALIDAR OS DADOS.
+        
+    -->
+    <h1>TechNova 2026</h1>
+    <p> O TechNova 2026 é um evento fictício de tecnologia que reúne estudantes, pesquisadores,<br>
+        empresas e profissionais para apresentar as principais inovações do futuro.<br>
+        <br>
+        O evento aborda temas como Inteligência Artificial, robótica, computação quântica,<br>
+        realidade virtual e segurança digital,<br>
+        com palestras, oficinas e demonstrações práticas.<br>
+        <br>
+        🎯 Tema: “Tecnologia que transforma o futuro”<br>
+        📍 Local: Centro de Tecnologia e Inovação<br>
+        📅 Data: 20 e 21 de novembro de 2026<br>
+        👥 Público: Estudantes, profissionais, pesquisadores e entusiastas de tecnologia.
+    </p>
+    <br>
+    <h2>Inscrição:</h2>
+    <form action="https://ivanpires.dev/processa.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" required
+        maxlength="15"
+        minlength="15"
+        pattern="\(\d{2}\)\d\s\d{4}\-\d{4}"
+        >
+        <br>
+        <p>Endereço:</p>
+        <label for="cidades">Cidade:</label>
+        <input type="text" name="cidades" id="cidades" list="listacidades">
+        <datalist id="listacidades">
+            <option value="sinop">Sinop</option>
+            <option value="cuiaba">Cuiabá</option>
+            <option value="varzea-grande">Várzea Grande</option>
+            <option value="rondonopolis">Rondonópolis</option>
+            <option value="lucas-do-rio-verde">Lucas do Rio Verde</option>
+            <option value="tangara-da-serra">Tangará da Serra</option>
+            <option value="caceres">Cáceres</option>
+            <option value="barra-do-garcas">Barra do Garças</option>
+            <option value="alta-floresta">Alta Floresta</option>
+            <option value="pontes-lacerda">Pontes e Lacerda</option>
+            <option value="primavera-do-leste">Primavera do Leste</option>
+            <option value="colider">Colíder</option>
+            <option value="diamantino">Diamantino</option>
+            <option value="jaciara">Jaciara</option>
+            <option value="juscimeira">Juscimeira</option>
+            <option value="poconé">Poconé</option>
+            <option value="rosario-oeste">Rosário Oeste</option>
+            <option value="araputanga">Araputanga</option>
+            <option value="juina">Juína</option>
+            <option value="comodoro">Comodoro</option>
+        </datalist>
+        <br>
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" id="bairro" required>
+        <br>
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" id="rua" required>
+        <br>
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" required
+        maxlength="9"
+        minlength="9"
+        pattern="\d{5}-\d{3}"
+        >
+        <br>
+        <p>escolha um minicurso:</p>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
