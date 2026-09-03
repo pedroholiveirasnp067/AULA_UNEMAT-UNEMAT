@@ -1,0 +1,104 @@
+body{
+    height: 1500px;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+fieldset{
+    background-color: darkgrey;
+    border-color: darkgrey;
+    width: 250px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+fieldset:hover{
+    transition: 0.3s;
+    box-shadow: 2px 2px 20px cyan;
+}
+fieldset:not(:hover){
+    transition: 0.3s;
+    box-shadow: none;
+}
+#header{
+    display: inline-block;
+    justify-content: center;
+}
+#titulo-pagina{
+    width: 255%;
+    text-align: center;
+}
+#descricao{
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 80%;
+}
+#geral{
+    padding-left: 40%;
+}
+#informacoes-evento{
+    padding: 20px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+#informacoes-evento .labels{
+    padding: 0 10px 10px 0;
+    text-align: left;
+}
+#sugestao-coffe-break .labels{
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+#sugestao-coffe-break .inputs{
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+#sugestao-coffe-break{
+    padding: 20px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+#enviar{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding-top: 20px;
+}
+#enviar input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#enviar input[type="submit"]:hover{
+    transition: 0.3s;
+    width: 110px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #45a049;
+}
+#enviar input[type="submit"]:not(:hover){
+    transition: 0.3s;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+}
+.labels{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: right;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
