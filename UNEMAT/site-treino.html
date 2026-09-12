@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>titulo da página</title>
+</head>
+<body>
+    <h1>Dados para cadastro</h1>
+    <form action="https://ivanpires.dev/processa.php" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <div class="labels">
+                <label for="nome">Digite seu nome:</label>
+                <label for="email">Digite seu e-mail:</label>
+                <label for="telefone">Digite seu telefone:</label>
+                <label for="senha">Digite sua senha:</label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="nome" id="nome">
+                <input type="email" name="email" id="email">
+                <input type="text" name="telefone" id="telefone"
+                minlength="15" 
+                maxlength="15" 
+                pattern="\(d{2}\)\d{1}\s\d{4}\-\d{4}">
+                <input type="password" name="senha" id="senha" minlength="4">
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>
