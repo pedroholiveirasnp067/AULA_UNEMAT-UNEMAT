@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 header{
-    min-width: 100vw;
+    min-width: 100%;
     background: linear-gradient(to right, red, yellow);
     min-height: 150px;
     display: flex;
@@ -22,4 +22,16 @@ header button{
     border-radius: 30px;
     border: solid 2px gray;
     cursor: pointer;
+}
+nav{
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    font-size: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
 }
