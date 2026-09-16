@@ -22,6 +22,7 @@ header button{
     border-radius: 30px;
     border: solid 2px gray;
     cursor: pointer;
+    box-shadow: 3px 4px black;
 }
 nav{
     width: 100%;
@@ -34,4 +35,8 @@ nav a{
     padding: 1rem;
     text-decoration: none;
     color: black;
+    background-color: tomato;
+}
+nav a:hover{
+    background-color: transparent;
 }
