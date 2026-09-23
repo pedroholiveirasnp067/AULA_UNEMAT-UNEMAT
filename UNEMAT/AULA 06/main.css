@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+}
+div{
+    display: flex;
+}
+#vermelho{
+    background-color: #990000ee;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 212px;
+    padding-top: 212px;
+    color: #990000ee;
+    justify-content: end;
+}
+#azul{
+    background-color: #000066ee;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 212px;
+    padding-top: 212px;
+    color: #000066ee;
+    justify-content: left;
+}
+.roxo{
+    background-color: #550055ef;
+    color: #550055ef;
+    width: 150px;
+    height: 600px;
+    padding: 150px;
+    box-shadow: 2px 2px 20px #550055;
+}
+#vermelho .roxo{
+    border-radius: 300px 0 0 300px;
+}
+#azul .roxo{
+    border-radius: 0 300px 300px 0;
+}
