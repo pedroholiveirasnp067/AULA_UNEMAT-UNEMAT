@@ -41,7 +41,7 @@ while True:
             lista_notas.append(getNotas())
 
         media = calcMedia(lista_notas[0], lista_notas[1], lista_notas[2])
-        verif_aprovacao, media_necessaria = verifMedia(media, 7)
+        verif_aprovacao, media_necessaria = verifMedia(media, 5)
 
         escreveStatus(media, verif_aprovacao, media_necessaria)
         break
