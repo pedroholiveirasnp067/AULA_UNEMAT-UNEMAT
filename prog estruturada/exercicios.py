@@ -1,28 +1,137 @@
 # Pedro Henrique de Oliveira
 #============================
 
+# ----------------------------------------------------------------------------------
 # exercício 1:
-#ano = int(input('Digite seu ano de nascimento: '))
-#print(f'você tem {2026-ano} anos de idade')
+def ColetaAno():
+    return int(input('Digite seu ano de nascimento: '))
+def CalculaIdade(ano_nascimento):
+    return 2026 - ano_nascimento
 
-n1 = float(input('digite o primeiro numero: '))
-n2 = float(input('digite o segundo numero: '))
-operacao = input('''
+#ano = ColetaAno()
+#print(f'você tem {CalculaIdade(ano)} anos de idade')
+
+# ----------------------------------------------------------------------------------
+# exercício 2:
+def ColetaNumero():
+    return float(input('digite um número: '))
+def Menu():
+    print('''
 escolha uma operação (digite os numeros de 1 a 4):
 1. soma
 2. subtração
 3. multiplicação
 4. divisão
+''')
+    return input('>>> ')
 
->>>''')
+#n1 = ColetaNumero()
+#n2 = ColetaNumero()
+#operacao = Menu()
 
-if operacao == '1':
-    print(n1+n2)
-elif operacao == '2':
-    print(n1-n2)
-elif operacao == '3':
-    print(n1*n2)
-elif operacao == '4':
-    print(n1/n1)
-else:
-    print('ERRO: digite apenas uma das opções (números de 1 a 4)!')
+#if operacao == '1':
+#    print(n1+n2)
+#elif operacao == '2':
+#    print(n1-n2)
+#elif operacao == '3':
+#    print(n1*n2)
+#elif operacao == '4':
+#    print(n1/n2)
+#else:
+#    print('ERRO: digite apenas uma das opções (números de 1 a 4)!')
+
+# ----------------------------------------------------------------------------------
+# exercício 3:
+#numero = ColetaNumero() # reutilizei a função do exercício 2
+
+#print(f'{numero} é par') if numero % 2 == 0 else print(f'{numero} é ímpar')
+
+# ----------------------------------------------------------------------------------
+# exercício 4:
+def ColetaNotas(quantidade_notas):
+    soma_notas = 0
+    for e in range(quantidade_notas):
+        soma_notas += float(input(f'digite sua nota {e+1}: '))
+    return soma_notas
+def CalculaMedia(nota, quantidade_notas):
+    return nota / quantidade_notas
+
+#notas = ColetaNotas(3)
+#media = CalculaMedia(notas, 3)
+#print(f'Média: {media}')
+
+#if media >= 7:
+#    print('Aprovado!')
+#elif media >= 5:
+#    print('Recuperação!')
+#else:
+#    print('Reprovado!')
+
+# ----------------------------------------------------------------------------------
+# exercício 5:
+#numero = ColetaNumero() # reutilizei a mesma função do exercício 2
+
+#for e in range(1,11):
+#    print(f'{numero} x {e} = {numero*e}')
+
+# ----------------------------------------------------------------------------------
+# exercício 6:
+def ColetaTemp():
+    return float(input('digite uma temperatura em graus celsius: '))
+def ConverteTemp(temp_celsius):
+    return (temp_celsius * 9 / 5) + 32
+
+#temperatura = ColetaTemp()
+#print(f'{temperatura}°C --> {ConverteTemp(temperatura)}°F')
+
+# ----------------------------------------------------------------------------------
+# exercício 7:
+def MenuJurosSimples():
+    print('''
+Taxa ao mês ou ao ano:
+1. Ao mês
+2. Ao ano
+''')
+    return input('>>> ')
+
+def ColetaCapital():
+    return float(input('digite o capital: '))
+
+def ColetaTaxa():
+    periodo = MenuJurosSimples()
+
+    if periodo == '1':
+        return float(input('digite a taxa ao mês: ')), 'meses'
+    elif periodo == '2':
+        return float(input('digite a taxa ao ano: ')), 'anos'
+    else:
+        print('ERRO: digite apenas uma das opções (números de 1 ou 2)!')
+        return ColetaTaxa()
+
+def ColetaTempo():
+    return float(input('digite o tempo: '))
+
+def CalculaJuros(capital, taxa, tempo):
+    juros = capital*taxa*tempo
+    return juros
+
+#capital = ColetaCapital()
+#taxa, periodo = ColetaTaxa()
+#tempo = ColetaTempo()
+
+#print(f'o valor dos juros simples de R$ {capital:.2f} aplicados durante {int(tempo)} {periodo} é: R$ {CalculaJuros(capital,taxa,tempo):.2f}')
+
+# ----------------------------------------------------------------------------------
+# exercício 8:
+def ColetaPeso():
+    return float(input('Digite seu peso em kg: '))
+
+def ColetaAltura():
+    return float(input('Digite sua altura em metros: '))
+
+def CalculaImc(peso, altura):
+    return peso / (altura**2)
+
+#peso = ColetaPeso()
+#altura = ColetaAltura()
+#print(f'Seu IMC é: {CalculaImc(peso,altura):.2f}')
