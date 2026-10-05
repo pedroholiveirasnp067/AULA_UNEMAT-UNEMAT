@@ -1,0 +1,16 @@
+{
+  "blocks": [
+    {
+      "t": "p",
+      "text": "Este é um parágrafo de teste para o relatório de Cidadania Fiscal."
+    }
+  ],
+  "refs": [
+    "SILVA, J. Consciência Fiscal e Cidadania. São Paulo: Editora Teste, 2026."
+  ],
+  "resumo": "Este relatório apresenta os resultados obtidos na pesquisa de campo realizada no município de Sinop, Mato Grosso.",
+  "palavras": "Cidadania Fiscal, Nota MT, MultiAção",
+  "anexoA": [
+    ["P1", "Qual a sua faixa etária?", "Até 24 anos\nDe 25 a 44 anos\n45 anos ou mais"]
+  ]
+}
