@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia de sobrevivência em Minecraft: como passar o primeiro dia, regras de ouro, comandos úteis, glossário e um formulário para jogadores.">
+  <title>Sobrevivência e formulário | Minecraft — Guia para Jogadores</title>
+</head>
+<body>
+  <header>
+    <h1>Guia de sobrevivência e formulário para jogadores</h1>
+    <p>Minecraft — Guia para Jogadores</p>
+  </header>
+
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="itens.html">Itens e receitas</a></li>
+      <li><a href="criaturas.html">Criaturas e biomas</a></li>
+      <li><a href="sobrevivencia.html">Sobrevivência</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Seu primeiro dia</h2>
+      <p>
+        Um dia completo no jogo dura <time datetime="PT20M">20 minutos</time> reais, e a noite chega mais
+        rápido do que parece. Siga esta ordem para chegar ao anoitecer em segurança:
+      </p>
+      <ol>
+        <li>Colete troncos de árvores e fabrique tábuas, gravetos e uma <strong>bancada de trabalho</strong>.</li>
+        <li>Faça uma picareta de madeira e minere pedra para trocar por ferramentas de pedra.</li>
+        <li>Mate alguns animais para conseguir comida e <em>lã</em> para a cama.</li>
+        <li>Fabrique uma fornalha e cozinhe a carne antes de comer.</li>
+        <li>Procure carvão e faça tochas para iluminar o seu abrigo.</li>
+        <li>Construa um abrigo simples (ou cave uma pequena sala na encosta de uma colina) e feche a entrada.</li>
+        <li>Se tiver uma cama, durma para pular a noite e definir seu ponto de renascimento.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Regras de ouro</h2>
+      <article>
+        <h3>Para minerar com segurança</h3>
+        <ul>
+          <li><strong>Nunca</strong> cave em linha reta para baixo: você pode cair em lava ou em uma caverna.</li>
+          <li>Leve sempre um balde de água para apagar lava ou amortecer uma queda.</li>
+          <li>Coloque tochas ao longo do túnel para achar o caminho de volta.</li>
+          <li>Diamantes aparecem com mais frequência perto da camada Y = −59, logo acima da rocha-mãe.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Para enfrentar monstros</h3>
+        <ul>
+          <li>Ilumine sua base e os arredores com tochas: monstros não aparecem em lugares claros.</li>
+          <li>Contra creepers, ataque e recue para longe antes que a explosão aconteça.</li>
+          <li>Use um escudo para bloquear flechas de esqueletos.</li>
+          <li>Ao ganhar <abbr title="Pontos de experiência">XP</abbr>, use-o para encantar ferramentas e armaduras.</li>
+        </ul>
+      </article>
+
+      <figure>
+        <blockquote>
+          <p>Nunca cave diretamente para baixo.</p>
+        </blockquote>
+        <figcaption>— Conselho tradicional da comunidade de jogadores</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Comandos úteis</h2>
+      <p>
+        Em mundos com trapaças ativadas, você pode digitar comandos no chat. Veja alguns dos mais simples:
+      </p>
+      <ul>
+        <li><code>/time set day</code>: muda o horário do mundo para o dia.</li>
+        <li><code>/gamemode survival</code>: volta para o modo Sobrevivência.</li>
+        <li><code>/seed</code>: mostra a semente que gerou o mundo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Glossário</h2>
+      <dl>
+        <dt>Mob</dt>
+        <dd>Qualquer criatura do jogo, como animais, monstros e aldeões.</dd>
+
+        <dt>Spawn</dt>
+        <dd>O momento em que uma criatura ou o jogador aparece no mundo. O <em>spawn</em> do jogador é o ponto de renascimento.</dd>
+
+        <dt>Bioma</dt>
+        <dd>Região do mundo com clima, vegetação e criaturas próprios.</dd>
+
+        <dt>Chunk</dt>
+        <dd>Pedaço do mundo com 16 × 16 blocos de largura que o jogo carrega por vez.</dd>
+
+        <dt><abbr title="Jogador contra jogador">PvP</abbr></dt>
+        <dd>Combate entre jogadores, comum em servidores.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Formulário para jogadores</h2>
+      <p>
+        Conte um pouco sobre você e compartilhe sua melhor dica. Os campos marcados com
+        <strong>*</strong> são obrigatórios. Este formulário é apenas uma demonstração: os dados não são
+        armazenados.
+      </p>
+
+      <form method="post" action="https://ivanpires.dev/processa.php">
+        <fieldset>
+          <legend>Dados do jogador</legend>
+
+          <p>
+            <label for="apelido">Apelido no jogo * (3 a 16 caracteres):</label><br>
+            <input type="text" id="apelido" name="apelido" required minlength="3" maxlength="16"
+                   pattern="[A-Za-z0-9_]{3,16}" autocomplete="nickname"
+                   title="Use de 3 a 16 caracteres: letras sem acento, números ou sublinhado.">
+          </p>
+
+          <p>
+            <label for="email">E-mail *:</label><br>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="inicio">Data em que começou a jogar *:</label><br>
+            <input type="date" id="inicio" name="inicio" required min="2009-05-17" max="2026-10-13">
+          </p>
+
+          <p>
+            <label for="horas">Horas jogadas por semana * (0 a 168):</label><br>
+            <input type="number" id="horas" name="horas" required min="0" max="168" step="1">
+          </p>
+
+          <p>
+            <label for="mundo">Link de um vídeo ou foto do seu mundo (opcional):</label><br>
+            <input type="url" id="mundo" name="mundo" placeholder="https://exemplo.com" autocomplete="url">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Seu estilo de jogo</legend>
+
+          <p>
+            <label for="plataforma">Plataforma que você usa *:</label><br>
+            <select id="plataforma" name="plataforma" required>
+              <option value="">Selecione uma opção</option>
+              <option value="java">Java Edition (computador)</option>
+              <option value="bedrock-pc">Bedrock Edition (Windows)</option>
+              <option value="console">Console (PlayStation, Xbox ou Switch)</option>
+              <option value="celular">Celular ou tablet</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Modo de jogo favorito *</legend>
+            <p>
+              <input type="radio" id="modo-sobrevivencia" name="modo" value="sobrevivencia" required>
+              <label for="modo-sobrevivencia">Sobrevivência</label>
+            </p>
+            <p>
+              <input type="radio" id="modo-criativo" name="modo" value="criativo">
+              <label for="modo-criativo">Criativo</label>
+            </p>
+            <p>
+              <input type="radio" id="modo-aventura" name="modo" value="aventura">
+              <label for="modo-aventura">Aventura</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>O que você mais gosta de fazer? (marque quantos quiser)</legend>
+            <p>
+              <input type="checkbox" id="gosto-minerar" name="gosto" value="minerar">
+              <label for="gosto-minerar">Minerar</label>
+            </p>
+            <p>
+              <input type="checkbox" id="gosto-construir" name="gosto" value="construir">
+              <label for="gosto-construir">Construir</label>
+            </p>
+            <p>
+              <input type="checkbox" id="gosto-explorar" name="gosto" value="explorar">
+              <label for="gosto-explorar">Explorar</label>
+            </p>
+            <p>
+              <input type="checkbox" id="gosto-redstone" name="gosto" value="redstone">
+              <label for="gosto-redstone">Criar máquinas com redstone</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="nivel">Nível de experiência (1 = iniciante, 10 = veterano):</label><br>
+            <input type="range" id="nivel" name="nivel" min="1" max="10" step="1" value="5">
+          </p>
+
+          <p>
+            <label for="cor">Sua cor favorita de lã:</label><br>
+            <input type="color" id="cor" name="cor" value="#3c8527">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sua melhor dica</legend>
+
+          <p>
+            <label for="dica">Compartilhe uma dica com outros jogadores * (20 a 500 caracteres):</label><br>
+            <textarea id="dica" name="dica" rows="5" cols="40" required minlength="20" maxlength="500"></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="aceite" name="aceite" value="sim" required>
+            <label for="aceite">Concordo em compartilhar minha dica com a comunidade *</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar formulário</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Sobre este site</h2>
+    <p>
+      Trabalho da disciplina <strong>Introdução ao Desenvolvimento Web</strong> (Avaliação 01).
+    </p>
+    <p>
+      Para saber mais:
+      <a href="https://pt.minecraft.wiki/" target="_blank" rel="noopener noreferrer">Minecraft Wiki (abre em nova aba)</a>.
+    </p>
+    <p><small>Atualizado em <time datetime="2026-10-13">13 de outubro de 2026</time>.</small></p>
+  </footer>
+</body>
+</html>
