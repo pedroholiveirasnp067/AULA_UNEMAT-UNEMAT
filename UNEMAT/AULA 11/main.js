@@ -74,6 +74,7 @@ if (resultado != null){
 }
 */
 
+/*
 const notas = [];
 const alunos = [];
 
@@ -92,3 +93,31 @@ alunos.push('alfredo');
 for (let aluno of alunos){
     console.log(`Nome: ${aluno}`);
 }
+*/
+
+// função
+function soma(a,b){
+    return a + b;
+}
+console.log(soma(10,5));
+
+// função anônima
+const subtracao = function (a,b){
+    return a - b;
+}
+console.log(subtracao(10,7));
+
+// Arrow Function
+// Quando a função so tem uma linha, return fica implicito
+const multiplicacao = (a,b) => a * b;
+
+// Quando a função precisa de mais de uma linha, precisa do return
+const divisao = (a,b) => {
+    if (b == 0){
+        return 'não é possivel divvidir por zero';
+    }
+    return a / b;
+}
+
+console.log(multiplicacao(6,7));
+console.log(divisao(10,2));
