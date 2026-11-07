@@ -4,7 +4,7 @@ const calcMedia = (notas) => {
         media += nota;
     }
     media = media / notas.length;
-    return media
+    return media;
 }
 
 const situacao = (media) => {
