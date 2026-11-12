@@ -25,9 +25,9 @@ minecraft-guia/
 
 ## Integrantes
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
+- Pedro Henrique de oliveira
+- Pedro Daniel Coutinho
+- Lucas Reuel
 - Nome do integrante 4
 
 ## Como visualizar
