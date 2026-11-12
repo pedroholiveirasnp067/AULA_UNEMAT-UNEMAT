@@ -28,7 +28,6 @@ minecraft-guia/
 - Pedro Henrique de oliveira
 - Pedro Daniel Coutinho
 - Lucas Reuel
-- Nome do integrante 4
 
 ## Como visualizar
 
