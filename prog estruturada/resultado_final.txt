@@ -1,0 +1,306 @@
+
+	=======================
+	n° de aprovados: 65
+	n° de provas finais: 0
+	n° de reprovados: 35
+	=======================
+	Ana Silva
+Média: 7.85 Aprovado
+
+Bruno Santos
+Média: 5.70 Reprovado
+
+Carlos Oliveira
+Média: 8.00 Aprovado
+
+Daniela Souza
+Média: 9.50 Aprovado
+
+Eduardo Rodrigues
+Média: 5.85 Reprovado
+
+Fernanda Ferreira
+Média: 5.50 Reprovado
+
+Gabriel Alves
+Média: 9.00 Aprovado
+
+Helena Pereira
+Média: 7.25 Aprovado
+
+Igor Lima
+Média: 6.15 Reprovado
+
+Juliana Gomes
+Média: 8.25 Aprovado
+
+Lucas Costa
+Média: 5.00 Reprovado
+
+Mariana Ribeiro
+Média: 9.65 Aprovado
+
+Pedro Martins
+Média: 7.00 Aprovado
+
+Rafaela Carvalho
+Média: 7.00 Aprovado
+
+Rodrigo Almeida
+Média: 8.00 Aprovado
+
+Sofia Lopes
+Média: 9.00 Aprovado
+
+Tiago Soares
+Média: 4.75 Reprovado
+
+Beatriz Fernandes
+Média: 8.10 Aprovado
+
+Leonardo Vieira
+Média: 6.40 Reprovado
+
+Larissa Barbosa
+Média: 8.85 Aprovado
+
+Ana Santos
+Média: 6.00 Reprovado
+
+Bruno Oliveira
+Média: 7.50 Aprovado
+
+Carlos Souza
+Média: 6.75 Reprovado
+
+Daniela Rodrigues
+Média: 8.25 Aprovado
+
+Eduardo Ferreira
+Média: 4.35 Reprovado
+
+Fernanda Alves
+Média: 8.10 Aprovado
+
+Gabriel Pereira
+Média: 9.40 Aprovado
+
+Helena Lima
+Média: 6.90 Reprovado
+
+Igor Gomes
+Média: 4.75 Reprovado
+
+Juliana Costa
+Média: 8.55 Aprovado
+
+Lucas Ribeiro
+Média: 7.50 Aprovado
+
+Mariana Martins
+Média: 9.75 Aprovado
+
+Pedro Carvalho
+Média: 5.40 Reprovado
+
+Rafaela Almeida
+Média: 7.10 Aprovado
+
+Rodrigo Lopes
+Média: 8.10 Aprovado
+
+Sofia Soares
+Média: 9.55 Aprovado
+
+Tiago Fernandes
+Média: 5.65 Reprovado
+
+Beatriz Vieira
+Média: 7.45 Aprovado
+
+Leonardo Barbosa
+Média: 6.80 Reprovado
+
+Larissa Silva
+Média: 8.35 Aprovado
+
+Ana Oliveira
+Média: 6.25 Reprovado
+
+Bruno Souza
+Média: 7.80 Aprovado
+
+Carlos Rodrigues
+Média: 6.00 Reprovado
+
+Daniela Ferreira
+Média: 9.00 Aprovado
+
+Eduardo Alves
+Média: 4.60 Reprovado
+
+Fernanda Pereira
+Média: 8.25 Aprovado
+
+Gabriel Lima
+Média: 9.40 Aprovado
+
+Helena Gomes
+Média: 7.35 Aprovado
+
+Igor Costa
+Média: 5.75 Reprovado
+
+Juliana Ribeiro
+Média: 8.70 Aprovado
+
+Lucas Martins
+Média: 7.00 Aprovado
+
+Mariana Carvalho
+Média: 9.90 Aprovado
+
+Pedro Almeida
+Média: 5.25 Reprovado
+
+Rafaela Lopes
+Média: 7.55 Aprovado
+
+Rodrigo Soares
+Média: 8.40 Aprovado
+
+Sofia Fernandes
+Média: 9.35 Aprovado
+
+Tiago Vieira
+Média: 4.40 Reprovado
+
+Beatriz Barbosa
+Média: 7.80 Aprovado
+
+Leonardo Silva
+Média: 6.65 Reprovado
+
+Larissa Santos
+Média: 8.55 Aprovado
+
+Ana Souza
+Média: 6.50 Reprovado
+
+Bruno Rodrigues
+Média: 8.00 Aprovado
+
+Carlos Ferreira
+Média: 5.55 Reprovado
+
+Daniela Alves
+Média: 9.25 Aprovado
+
+Eduardo Pereira
+Média: 5.00 Reprovado
+
+Fernanda Lima
+Média: 8.45 Aprovado
+
+Gabriel Gomes
+Média: 9.80 Aprovado
+
+Helena Costa
+Média: 7.65 Aprovado
+
+Igor Ribeiro
+Média: 5.95 Reprovado
+
+Juliana Martins
+Média: 8.90 Aprovado
+
+Lucas Carvalho
+Média: 7.35 Aprovado
+
+Mariana Almeida
+Média: 9.80 Aprovado
+
+Pedro Lopes
+Média: 5.50 Reprovado
+
+Rafaela Soares
+Média: 7.75 Aprovado
+
+Rodrigo Fernandes
+Média: 8.60 Aprovado
+
+Sofia Vieira
+Média: 9.70 Aprovado
+
+Tiago Barbosa
+Média: 4.60 Reprovado
+
+Beatriz Silva
+Média: 8.05 Aprovado
+
+Leonardo Santos
+Média: 6.90 Reprovado
+
+Larissa Oliveira
+Média: 8.75 Aprovado
+
+Ana Rodrigues
+Média: 6.75 Reprovado
+
+Bruno Ferreira
+Média: 8.30 Aprovado
+
+Carlos Alves
+Média: 5.80 Reprovado
+
+Daniela Pereira
+Média: 9.40 Aprovado
+
+Eduardo Lima
+Média: 5.25 Reprovado
+
+Fernanda Gomes
+Média: 8.65 Aprovado
+
+Gabriel Costa
+Média: 9.90 Aprovado
+
+Helena Ribeiro
+Média: 7.85 Aprovado
+
+Igor Martins
+Média: 6.20 Reprovado
+
+Juliana Carvalho
+Média: 9.10 Aprovado
+
+Lucas Almeida
+Média: 7.60 Aprovado
+
+Mariana Lopes
+Média: 9.95 Aprovado
+
+Pedro Soares
+Média: 5.75 Reprovado
+
+Rafaela Fernandes
+Média: 7.95 Aprovado
+
+Rodrigo Vieira
+Média: 8.80 Aprovado
+
+Sofia Barbosa
+Média: 9.80 Aprovado
+
+Tiago Silva
+Média: 4.90 Reprovado
+
+Beatriz Santos
+Média: 8.25 Aprovado
+
+Leonardo Oliveira
+Média: 7.15 Aprovado
+
+Larissa Souza
+Média: 9.00 Aprovado
+
