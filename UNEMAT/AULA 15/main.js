@@ -32,4 +32,42 @@ form.addEventListener('submit', (event) => {
         form.email.focus();
         return;
     }
+
+    if (form.cep.value == ''
+        || form.rua.value == ''
+        || form.bairro.value == ''
+        || form.cidade.value == ''
+        || form.estado.value == ''
+        || form.numero.value == ''
+    ){
+        alert('Por favor, preencha todos os campos do endereço.');
+        return;
+    }
+    form.submit();
+});
+
+const cep = document.querySelector('#cep');
+
+cep.addEventListener('input', async () => {
+    cep.value = cep.value.replace(/\D/g, '');
+
+    if (cep.value.length === 8) {
+        try {
+            const resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
+            if (!resposta.ok) throw new Error('Falha ao consultar o CEP');
+
+            const dados = await resposta.json();
+            if (dados.erro) {
+                alert('CEP não encontrado.');
+                return;
+            }
+
+            form.rua.value = dados.logradouro || '';
+            form.bairro.value = dados.bairro || '';
+            form.cidade.value = dados.localidade || '';
+            form.estado.value = dados.uf || '';
+        } catch (erro) {
+            alert('Não foi possível consultar o CEP. Tente novamente.');
+        }
+    }
 });
