@@ -1,18 +1,28 @@
+"""
+Sistema de cálculo de médias e situação acadêmicade alunos.
+
+Autores:
+	- Pedro Henrique de Oliveira
+	
+Disciplina:
+	- Programação Estruturada"""
+
 from pathlib import Path
 lista_infos = []
 
-def calcular_media(lista_valores):
-	"""Calcula a média aritimética de uma listade valores
+def calcular_media(nota1, nota2):
+	"""Calcula a média aritimética de duas notas
 	e a retorna
 
 	Args:
-		lista_valores (list): lista coms os valores.
+		nota1 (float): A primeira nota.
+		nota2 (float): A segunda nota.
 
 	Returns:
 		float: a média aritimética dos valores.
 	"""
 
-	return sum(lista_valores) / len(lista_valores)
+	return (nota1 + nota2) / 2
 
 def separarDados(string, separador=';'):
 	"""Separa uma string por meio se um separador padrão,
@@ -45,13 +55,6 @@ def definir_situacao(media, media_corte=7):
 	else:
 		return 'Reprovado'
 
-def contagemInfos(lista, comparacao):
-	soma = 0
-	for e in lista:
-		if e[-1] == comparacao:
-			soma += 1
-	return soma
-
 def coleta_caminho():
 	"""Coleta o caminho do arquivo e verifica se ele existe.
 
@@ -82,6 +85,15 @@ def verif_nome_arquivo(nome_arquivo):
 	return True
 
 def carregar_arquivo(arquivo_entrada):
+	"""Carrega os dados de um arquivo de entrada e os armazena em uma lista global.
+	
+	Args:
+		arquivo_entrada (str): O nome do arquivo de entrada.
+
+	Returns:
+		bool: True se os dados forem carregados com sucesso, False caso contrário.
+	"""
+
 	global lista_infos
 	if not verif_nome_arquivo(arquivo_entrada):
 		print('Arquivo inválido. O arquivo deve ter a extensão .txt')
@@ -91,35 +103,38 @@ def carregar_arquivo(arquivo_entrada):
 		arquivo_entrada = str(coleta_caminho()) + '\\' + arquivo_entrada
 		with open(arquivo_entrada, 'r', encoding='utf-8') as file:
 			for lin in file.readlines():
-				dados = separarDados(lin)
-				media = calcular_media([float(dados[1]), float(dados[2])])
-				situacao = definir_situacao(media)
-				lista_infos.append([dados[0], media, situacao])
+				try:
+					if lin.strip():
+						dados = separarDados(lin)
+						media = calcular_media(float(dados[1]), float(dados[2]))
+						situacao = definir_situacao(media)
+						lista_infos.append([dados[0], media, situacao])
+				except:
+					print(f'Erro ao processar a linha: {lin}')
+					lista_infos.append([dados[0], 0.0, 'erro ao processar a linha'])
 
 		return True
 
 def salvar_arquivo(arquivo_saida):
-	global lista_infos
-	if not verif_nome_arquivo(arquivo_saida):
-		print('Arquivo inválido. O arquivo deve ter a extensão .txt')
-		return False
+	"""Salva os dados processados em um arquivo de saída.
+	
+	Args:
+		arquivo_saida (str): O nome do arquivo de saída.
 
+	Returns:
+		bool: True se os dados forem salvos com sucesso, False caso contrário.
+	"""
+
+	global lista_infos
 	arquivo_saida = str(coleta_caminho()) + '\\' + arquivo_saida
-	with open(arquivo_saida, 'w', encoding='utf-8') as f:
-		aprovados = contagemInfos(lista_infos, 'Aprovado')
-		prova_final = contagemInfos(lista_infos, 'Prova Final')
-		reprovados = contagemInfos(lista_infos, 'Reprovado')
-		f.write(f'''
-=======================
-n° de aprovados: {aprovados}
-n° de provas finais: {prova_final}
-n° de reprovados: {reprovados}
-=======================
-''')
-		for inf in lista_infos:
-			f.write(f'{inf[0]}\nMédia: {inf[1]:.2f} {inf[2]}\n')
-			f.write('\n')
-	return True
+	try:
+		with open(arquivo_saida, 'w', encoding='utf-8') as f:
+			for inf in lista_infos:
+				f.write(f'{inf[0]};{inf[1]:.1f};{inf[2]}\n')
+		return True
+	except:
+		return False
+		
 
 if __name__ == '__main__':
 	try:
@@ -129,13 +144,9 @@ if __name__ == '__main__':
 			if not verificacao:
 				continue
 
-			while True:
-				arquivo_saida = input('Digite o nome do arquivo de saída: ')
-				verif = salvar_arquivo(arquivo_saida)
-				if not verif:
-					continue
-				else:
-					break
+			arquivo_saida = 'resultado_final.txt'
+			verif = salvar_arquivo(arquivo_saida)
+			print(f'Arquivo {arquivo_saida} foi salvo com sucesso!') if verif else print('Erro ao salvar o arquivo de saída.')
 			break
 			
 	except FileNotFoundError:

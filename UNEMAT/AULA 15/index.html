@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>aula 15</title>
+    <link rel='stylesheet' href='main.css'>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+    <form method="post" action="https://ivanpires.dev/processa.php" id="formulario">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="nome">Nome: </label>
+            <input id="nome" name="nome" type="text"><br>
+            <label for="nascimento">Data de nascimento: </label>
+            <input type="text" id="nascimento" name="idade"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Dados de contato</legend>
+            <label for="cep">Cep: </label>
+            <input type="text" id="cep" name="cep"><br>
+            <label for="estado">Estado: </label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br>
+            <label for="cidade">Cidade: </label>
+            <input type="text" id="cidade" name="cidade"><br>
+            <label for="bairro">Bairro: </label>
+            <input type="text" id="bairro" name="bairro"><br>
+            <label for="numero">Número: </label>
+            <input type="number" id="numero" name="numero"> 
+        </fieldset>
+        <hr>
+        <input type="submit" name="enviar" id="botao">
+    </form>
+</body>
+</html>
