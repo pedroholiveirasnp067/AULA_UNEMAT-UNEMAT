@@ -5,29 +5,29 @@ Autores:
 	- Pedro Henrique de Oliveira
 	
 Disciplina:
-	- Programação Estruturada"""
+	- Programação Estruturada
+"""
 
 from pathlib import Path
 lista_infos = []
 
 def calcular_media(nota1, nota2):
-	"""Calcula a média aritimética de duas notas
-	e a retorna
+	"""Calcula a média aritmética de duas notas e a retorna.
 
 	Args:
 		nota1 (float): A primeira nota.
 		nota2 (float): A segunda nota.
 
 	Returns:
-		float: a média aritimética dos valores.
+		float: a média aritmética dos valores.
 	"""
 
 	return (nota1 + nota2) / 2
 
 def separarDados(string, separador=';'):
-	"""Separa uma string por meio se um separador padrão,
-	ou por um separador passado na chamada da função e retorna
-	uma lista com os valores divididos.
+	"""Divide uma string utilizando um separador padrão ou 
+	um separador especificado na chamada da função e retorna 
+	uma lista com os valores resultantes.
 
 	Args:
 		string (str): O texto a ser separado.
@@ -39,36 +39,28 @@ def separarDados(string, separador=';'):
 
 	return string.split(separador)
 
-def definir_situacao(media, media_corte=7):
+def definir_situacao(media):
 	"""Compara uma média e verifica sua situação em relação a um valor de corte.
 
 	Args:
 		media (float): Média a ser comparada.
-		media_corte (int, optional): Valor de corte para tomar uma decisão.
 
 	Returns:
 		str: Um texto indicando a situação do estudante.
 	"""
 
-	if media >= media_corte:
+	if media >= 7.0:
 		return 'Aprovado'
 	else:
 		return 'Reprovado'
 
 def coleta_caminho():
-	"""Coleta o caminho do arquivo e verifica se ele existe.
+    """Retorna o caminho do diretório atual.
 
-	Returns:
-		Path: O caminho do arquivo.
-
-	Raises:
-		FileNotFoundError: Caso o arquivo não exista.
-	"""
-
-	caminho = Path().resolve()
-	if not caminho.exists():
-		raise FileNotFoundError
-	return caminho
+    Returns:
+        Path: Caminho do diretório atual.
+    """
+    return Path.cwd()
 
 def verif_nome_arquivo(nome_arquivo):
 	"""Verifica se o nome do arquivo é válido.
@@ -95,23 +87,36 @@ def carregar_arquivo(arquivo_entrada):
 	"""
 
 	global lista_infos
+	lista_infos.clear()
+
 	if not verif_nome_arquivo(arquivo_entrada):
 		print('Arquivo inválido. O arquivo deve ter a extensão .txt')
 		return False
 
 	else:
-		arquivo_entrada = str(coleta_caminho()) + '\\' + arquivo_entrada
+		arquivo_entrada = coleta_caminho() / arquivo_entrada
+
 		with open(arquivo_entrada, 'r', encoding='utf-8') as file:
 			for lin in file.readlines():
+				dados = []
+				
 				try:
 					if lin.strip():
-						dados = separarDados(lin)
+						dados = separarDados(lin.strip())
+
+						if len(dados) != 3:
+							raise ValueError
+						
 						media = calcular_media(float(dados[1]), float(dados[2]))
 						situacao = definir_situacao(media)
+
 						lista_infos.append([dados[0], media, situacao])
-				except:
+
+				except (ValueError, IndexError):
 					print(f'Erro ao processar a linha: {lin}')
-					lista_infos.append([dados[0], 0.0, 'erro ao processar a linha'])
+					nome = dados[0] if 'dados' in locals() and dados else 'Linha inválida'
+
+					lista_infos.append([nome, 0.0, 'erro ao processar a linha'])
 
 		return True
 
@@ -126,13 +131,13 @@ def salvar_arquivo(arquivo_saida):
 	"""
 
 	global lista_infos
-	arquivo_saida = str(coleta_caminho()) + '\\' + arquivo_saida
+	arquivo_saida = coleta_caminho() / arquivo_saida
 	try:
 		with open(arquivo_saida, 'w', encoding='utf-8') as f:
 			for inf in lista_infos:
 				f.write(f'{inf[0]};{inf[1]:.1f};{inf[2]}\n')
 		return True
-	except:
+	except OSError:
 		return False
 		
 

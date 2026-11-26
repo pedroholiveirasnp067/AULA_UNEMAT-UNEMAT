@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Python: module nota_alunos</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">nota_alunos</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cpedro%5Conedrive%5Cdocumentos%5Cvscode%5Caula_unemat%5Cprog%20estruturada%5Cnota_alunos.py">c:\users\pedro\onedrive\documentos\vscode\aula_unemat\prog estruturada\nota_alunos.py</a></td></tr></table>
+    <p><span class="code">Sistema&nbsp;de&nbsp;cálculo&nbsp;de&nbsp;médias&nbsp;e&nbsp;situação&nbsp;acadêmicade&nbsp;alunos.<br>
+&nbsp;<br>
+Autores:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Pedro&nbsp;Henrique&nbsp;de&nbsp;Oliveira<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Disciplina:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Programação&nbsp;Estruturada</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-calcular_media"><strong>calcular_media</strong></a>(nota1, nota2)</dt><dd><span class="code">Calcula&nbsp;a&nbsp;média&nbsp;aritmética&nbsp;de&nbsp;duas&nbsp;notas&nbsp;e&nbsp;a&nbsp;retorna.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nota1&nbsp;(float):&nbsp;A&nbsp;primeira&nbsp;nota.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nota2&nbsp;(float):&nbsp;A&nbsp;segunda&nbsp;nota.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;a&nbsp;média&nbsp;aritmética&nbsp;dos&nbsp;valores.</span></dd></dl>
+ <dl><dt><a name="-carregar_arquivo"><strong>carregar_arquivo</strong></a>(arquivo_entrada)</dt><dd><span class="code">Carrega&nbsp;os&nbsp;dados&nbsp;de&nbsp;um&nbsp;arquivo&nbsp;de&nbsp;entrada&nbsp;e&nbsp;os&nbsp;armazena&nbsp;em&nbsp;uma&nbsp;lista&nbsp;global.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arquivo_entrada&nbsp;(str):&nbsp;O&nbsp;nome&nbsp;do&nbsp;arquivo&nbsp;de&nbsp;entrada.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;se&nbsp;os&nbsp;dados&nbsp;forem&nbsp;carregados&nbsp;com&nbsp;sucesso,&nbsp;False&nbsp;caso&nbsp;contrário.</span></dd></dl>
+ <dl><dt><a name="-coleta_caminho"><strong>coleta_caminho</strong></a>()</dt><dd><span class="code">Retorna&nbsp;o&nbsp;caminho&nbsp;do&nbsp;diretório&nbsp;atual.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Path:&nbsp;Caminho&nbsp;do&nbsp;diretório&nbsp;atual.</span></dd></dl>
+ <dl><dt><a name="-definir_situacao"><strong>definir_situacao</strong></a>(media)</dt><dd><span class="code">Compara&nbsp;uma&nbsp;média&nbsp;e&nbsp;verifica&nbsp;sua&nbsp;situação&nbsp;em&nbsp;relação&nbsp;a&nbsp;um&nbsp;valor&nbsp;de&nbsp;corte.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;media&nbsp;(float):&nbsp;Média&nbsp;a&nbsp;ser&nbsp;comparada.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Um&nbsp;texto&nbsp;indicando&nbsp;a&nbsp;situação&nbsp;do&nbsp;estudante.</span></dd></dl>
+ <dl><dt><a name="-salvar_arquivo"><strong>salvar_arquivo</strong></a>(arquivo_saida)</dt><dd><span class="code">Salva&nbsp;os&nbsp;dados&nbsp;processados&nbsp;em&nbsp;um&nbsp;arquivo&nbsp;de&nbsp;saída.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arquivo_saida&nbsp;(str):&nbsp;O&nbsp;nome&nbsp;do&nbsp;arquivo&nbsp;de&nbsp;saída.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;se&nbsp;os&nbsp;dados&nbsp;forem&nbsp;salvos&nbsp;com&nbsp;sucesso,&nbsp;False&nbsp;caso&nbsp;contrário.</span></dd></dl>
+ <dl><dt><a name="-separarDados"><strong>separarDados</strong></a>(string, separador=';')</dt><dd><span class="code">Divide&nbsp;uma&nbsp;string&nbsp;utilizando&nbsp;um&nbsp;separador&nbsp;padrão&nbsp;ou&nbsp;<br>
+um&nbsp;separador&nbsp;especificado&nbsp;na&nbsp;chamada&nbsp;da&nbsp;função&nbsp;e&nbsp;retorna&nbsp;<br>
+uma&nbsp;lista&nbsp;com&nbsp;os&nbsp;valores&nbsp;resultantes.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;(str):&nbsp;O&nbsp;texto&nbsp;a&nbsp;ser&nbsp;separado.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separador&nbsp;(str,&nbsp;optional):&nbsp;O&nbsp;valor&nbsp;usado&nbsp;para&nbsp;separar&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Uma&nbsp;lista&nbsp;com&nbsp;as&nbsp;strings&nbsp;separadas.</span></dd></dl>
+ <dl><dt><a name="-verif_nome_arquivo"><strong>verif_nome_arquivo</strong></a>(nome_arquivo)</dt><dd><span class="code">Verifica&nbsp;se&nbsp;o&nbsp;nome&nbsp;do&nbsp;arquivo&nbsp;é&nbsp;válido.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nome_arquivo&nbsp;(str):&nbsp;O&nbsp;nome&nbsp;do&nbsp;arquivo&nbsp;a&nbsp;ser&nbsp;verificado.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;se&nbsp;o&nbsp;nome&nbsp;do&nbsp;arquivo&nbsp;for&nbsp;válido,&nbsp;False&nbsp;caso&nbsp;contrário.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>lista_infos</strong> = []</td></tr></table>
+</body></html>
