@@ -1,4 +1,4 @@
-Ana Silva;0.0;erro ao processar a linha
+Ana Silva;7.8;Aprovado
 Bruno Santos;5.7;Reprovado
 Carlos Oliveira;8.0;Aprovado
 Daniela Souza;9.5;Aprovado

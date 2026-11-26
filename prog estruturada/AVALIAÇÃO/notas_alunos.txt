@@ -1,4 +1,4 @@
-Ana Silva;8.2
+Ana Silva;7.5;8.2
 Bruno Santos;6.0;5.4
 Carlos Oliveira;8.1;7.9
 Daniela Souza;9.0;10.0
